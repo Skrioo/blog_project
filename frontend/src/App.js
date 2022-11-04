@@ -17,14 +17,13 @@ function App() {
       <BrowserRouter>
         <div className="flex flex-col min-h-screen overflow-hidden">
           <AuthProvider>
-            <Routes>
-              <Route element={<Navbar />}></Route>
+            <Navbar />
 
-              {/* <PrivateRoute
-                element={<ProtectedPage />}
-                path="/protected"
-                exact
-              /> */}
+            <Routes>
+              {/* <Route element={<Navbar />}></Route> */}
+
+              <Route element={<ProtectedPage />} path="/protected" />
+
               <Route element={<Login />} path="/login" />
               <Route element={<Register />} path="/register" />
               <Route element={<Home />} path="/" />

@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav>
       <div>
-        <h1>Manifest</h1>
+        {/* <img height={32} width={45} src="" alt="logos" /> */}
         <div>
           {user ? (
             <>

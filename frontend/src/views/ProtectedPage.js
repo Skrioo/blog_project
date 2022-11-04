@@ -22,6 +22,7 @@ function ProtectedPage() {
     <div>
       <h1>Projected Page</h1>
       <p>{res}</p>
+      <p>this is protctd pge</p>
     </div>
   );
 }

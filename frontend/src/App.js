@@ -9,6 +9,7 @@ import Home from "./views/homePage";
 import Login from "./views/loginPage";
 import Register from "./views/registerPage";
 import ProtectedPage from "./views/ProtectedPage";
+import BlogPage from "./views/blogPage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route component={Login} path="/login" />
             <Route component={Register} path="/register" />
             <Route component={Home} path="/" />
+            <Route component={BlogPage} path="/blog" />
           </Switch>
         </AuthProvider>
         <Footer />

@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div>
-      <h4>Created By You</h4>
+      <h4>Kabalyion Order NovaZora</h4>
     </div>
   );
 };

@@ -12,6 +12,7 @@ const Navbar = () => {
           {user ? (
             <>
               <Link to="/">Home</Link>
+              <Link to="/blog">Blog</Link>
               <Link to="/protected">Protected Page</Link>
               <button onClick={logoutUser}>Logout</button>
             </>

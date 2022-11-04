@@ -5,6 +5,7 @@ from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
+
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
     @classmethod
     def get_token(cls, user):
@@ -40,3 +41,15 @@ class RegisterSerializer(serializers.ModelSerializer):
         user.save()
 
         return user
+
+class BlogPostSerializer(serializers.Serializer):
+    title = serializers.CharField(max_length=100)
+    content = serializers.CharField()
+
+    def validate_title(self, value):
+        """
+        Check that the blog post is about Django.
+        """
+        if 'django' not in value.lower():
+            raise serializers.ValidationError("Blog post is not about Django")
+        return value
